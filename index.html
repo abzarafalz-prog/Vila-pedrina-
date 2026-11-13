@@ -1,1 +1,309 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Villa Pedrina | Beleza e Bem-estar</title>
+<meta name="description" content="Villa Pedrina: beleza, autocuidado e bem-estar em Nova Friburgo. Conheça nossos serviços e agende seu horário.">
+
+<style>
+:root {
+  --gold: #f6bd13;
+  --black: #17140e;
+  --cream: #fff9ed;
+  --white: #ffffff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, sans-serif;
+  background: var(--cream);
+  color: var(--black);
+}
+a { text-decoration: none; color: inherit; }
+header {
+  background: var(--black);
+  color: white;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.logo {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 27px;
+  letter-spacing: 2px;
+}
+.logo small {
+  display: block;
+  font: 9px Arial;
+  letter-spacing: 3px;
+  text-align: center;
+  color: white;
+  margin-top: 5px;
+}
+nav { display: flex; gap: 22px; flex-wrap: wrap; }
+nav a { font-size: 14px; }
+nav a:hover { color: var(--gold); }
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--black);
+  padding: 14px 23px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: .2s;
+}
+.btn:hover { transform: translateY(-3px); }
+.hero {
+  min-height: 520px;
+  padding: 75px 8%;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(20,16,9,.94), rgba(20,16,9,.35)),
+    url('https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=1800&q=85') center/cover;
+  color: white;
+}
+.hero-content { max-width: 610px; }
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 5px;
+  font-size: 13px;
+  font-weight: bold;
+}
+h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.05;
+  margin: 20px 0;
+}
+h1 span { color: var(--gold); font-style: italic; }
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+section { padding: 75px 7%; }
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-title h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 5vw, 46px);
+}
+.section-title p {
+  color: #777;
+  margin-top: 12px;
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 22px;
+}
+.service {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 22px #00000012;
+  transition: .25s;
+}
+.service:hover { transform: translateY(-6px); }
+.service img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+.service h3 {
+  padding: 19px 15px 22px;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 21px;
+}
+.about {
+  background: var(--black);
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 45px;
+  align-items: center;
+}
+.about img {
+  width: 100%;
+  max-height: 430px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+.about h2 {
+  font-family: Georgia, serif;
+  color: var(--gold);
+  font-size: 42px;
+  margin: 18px 0;
+}
+.about p {
+  line-height: 1.9;
+  color: #eee;
+  margin-bottom: 20px;
+}
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.benefit {
+  border-left: 3px solid var(--gold);
+  padding: 10px 15px;
+}
+.benefit strong { color: var(--gold); }
+.cta {
+  text-align: center;
+  background: var(--gold);
+}
+.cta h2 {
+  font: italic clamp(34px, 5vw, 52px) Georgia, serif;
+  margin-bottom: 15px;
+}
+.cta p { margin-bottom: 25px; }
+.cta .btn {
+  background: var(--black);
+  color: white;
+}
+.contact {
+  text-align: center;
+}
+.contact p { margin: 13px 0; line-height: 1.7; }
+footer {
+  background: var(--black);
+  color: white;
+  padding: 30px 7%;
+  text-align: center;
+  line-height: 2;
+}
+footer span { color: var(--gold); }
+@media(max-width:600px) {
+  header { justify-content: center; text-align: center; }
+  nav { justify-content: center; gap: 14px; }
+  .hero { min-height: 480px; padding: 55px 7%; }
+  section { padding: 55px 6%; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="#" class="logo">
+    VILLA PEDRINA
+    <small>BELEZA • BEM-ESTAR • VOCÊ</small>
+  </a>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#sobre">Sobre nós</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <a class="btn" href="https://www.instagram.com/villapedrina/" target="_blank">Agende seu horário</a>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <div class="eyebrow">SEU MOMENTO, SUA BELEZA</div>
+    <h1>Beleza que inspira <span>bem-estar.</span></h1>
+    <p>Um espaço de cuidado, autoestima e relaxamento. Descubra uma experiência de beleza feita para você, em Nova Friburgo.</p>
+    <a class="btn" href="https://www.instagram.com/villapedrina/" target="_blank">Agende seu horário →</a>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="section-title">
+    <div class="eyebrow">CUIDADO EM CADA DETALHE</div>
+    <h2>Nossos serviços</h2>
+    <p>Um universo de beleza e autocuidado esperando por você.</p>
+  </div>
+
+  <div class="services">
+    <article class="service">
+      <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=700&q=80" alt="Cuidados com os cabelos">
+      <h3>Cabelos</h3>
+    </article>
+    <article class="service">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=80" alt="Maquiagem">
+      <h3>Maquiagem</h3>
+    </article>
+    <article class="service">
+      <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=700&q=80" alt="Manicure">
+      <h3>Manicure e pedicure</h3>
+    </article>
+    <article class="service">
+      <img src="https://images.unsplash.com/photo-1583001809873-a128495da465?auto=format&fit=crop&w=700&q=80" alt="Cuidados com cílios e sobrancelhas">
+      <h3>Cílios e sobrancelhas</h3>
+    </article>
+    <article class="service">
+      <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=700&q=80" alt="Spa e relaxamento">
+      <h3>Spa e relaxamento</h3>
+    </article>
+    <article class="service">
+      <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=700&q=80" alt="Head Spa">
+      <h3>Head Spa</h3>
+    </article>
+    <article class="service">
+      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=80" alt="Cuidados com a pele">
+      <h3>Cuidados com a pele</h3>
+    </article>
+    <article class="service">
+      <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=700&q=80" alt="Experiência de beleza">
+      <h3>Todos os serviços</h3>
+    </article>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <img src="IMG_0837.png" alt="Villa Pedrina">
+  <div>
+    <div class="eyebrow">SOBRE A VILLA PEDRINA</div>
+    <h2>Mais que um salão, um espaço para você!</h2>
+    <p>A Villa Pedrina é uma casa de beleza que acredita no cuidado com afeto e propósito. Um ambiente para valorizar sua beleza, renovar suas energias e dedicar um tempo especial a você.</p>
+    <p>Estamos no coração de Nova Friburgo, com diferentes experiências de beleza e bem-estar.</p>
+    <div class="benefits">
+      <div class="benefit"><strong>Beleza</strong><br>Em cada detalhe</div>
+      <div class="benefit"><strong>Bem-estar</strong><br>Seu momento de cuidado</div>
+      <div class="benefit"><strong>Acolhimento</strong><br>Você é especial</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Seu momento começa aqui!</h2>
+  <p>Reserve um tempo para você. Será um prazer receber você.</p>
+  <a class="btn" href="https://www.instagram.com/villapedrina/" target="_blank">Agende pelo Instagram →</a>
+</section>
+
+<section class="contact" id="contato">
+  <div class="section-title">
+    <div class="eyebrow">VENHA NOS VISITAR</div>
+    <h2>Estamos esperando por você</h2>
+  </div>
+  <p><strong>Endereço:</strong> Av. Alberto Braune, 5, sobreloja, Centro – Nova Friburgo/RJ.</p>
+  <p><strong>Instagram:</strong> @villapedrina</p>
+  <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Av.+Alberto+Braune+5+Nova+Friburgo" target="_blank">Como chegar →</a>
+</section>
+</main>
+
+<footer>
+  <div class="logo">VILLA PEDRINA</div>
+  <p>Beleza, bem-estar e você.</p>
+  <p>© 2026 Villa Pedrina. Todos os direitos reservados.</p>
+  <span>Nova Friburgo – RJ</span>
+</footer>
+
+</body>
+</html>
+
